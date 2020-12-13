@@ -149,7 +149,7 @@ public class JobFileAppender {
 		File logFile = new File(logFileName);
 
 		if (!logFile.exists()) {
-            return new LogResult(fromLineNum, 0, "readLog fail, logFile not exists", true);
+            return new LogResult(fromLineNum, 0, "readLog fail, logFile not exists:" + logFile.getAbsolutePath(), true);
 		}
 
 		// read file
